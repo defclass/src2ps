@@ -7,4 +7,4 @@ eg: $0 /tmp/xx.ps java";
 fi
 
 FILES=`find . -name "*.$2"`;
-/usr/bin/enscript --continuous-page-numbers --header='$N||Page $%'  --mark-wrapped-lines=arrow  --highlight --line-numbers  -o $1 $FILES
+/usr/bin/enscript --toc --continuous-page-numbers --header='$N||Page $%'  --mark-wrapped-lines=arrow  --highlight --line-numbers  -o $1 $FILES
