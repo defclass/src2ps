@@ -1,0 +1,9 @@
+#!/bin/sh
+if [ $# != 2 ] ; then
+    echo "Usage: $0  /need/to/saved/path file_extension
+eg: $0 /tmp/xx.ps \"(c|h)\"";
+
+    exit 1;
+fi
+FILES=`find . -regextype posix-extended -regex ".+\.$2"`;
+/usr/bin/enscript --toc --continuous-page-numbers --header='$N||Page $%'  --mark-wrapped-lines=arrow  --highlight --line-numbers  -o $1 $FILES
