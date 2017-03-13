@@ -17,7 +17,10 @@ a handy cmd to convert source code to PostScript
 # Configure
 
 * Add TOC format: 
+
   vim `/etc/enscript/enscript.cfg`
+
   uncomment line which contains string `TOCFormat`
+
   update to `TOCFormat: $3v P: $3%  L: $4L $-40N`
 
